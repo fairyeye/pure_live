@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:pure_live/common/index.dart';
-import 'package:pure_live/modules/search/search_controller.dart';
+import 'package:pure_live/modules/search/search_controller.dart' as cus_controller;
 
 class HomeTabletView extends StatelessWidget {
   final Widget body;
@@ -34,7 +34,7 @@ class HomeTabletView extends StatelessWidget {
                     heroTag: 'search',
                     elevation: 0,
                     onPressed: () {
-                      Get.put(SearchController());
+                      Get.put(cus_controller.SearchController());
                       onDestinationSelected(3);
                     },
                     child: const Icon(CustomIcons.search),

@@ -51,5 +51,5 @@ class LiveRoom {
       platform == other.platform && roomId == other.roomId;
 
   @override
-  int get hashCode => int.parse(roomId);
+  int get hashCode => roomId.hashCode;
 }

@@ -40,6 +40,7 @@ class LivePlayController extends GetxController {
     super.onInit();
     site.liveSite.getLiveStream(room).then((value) {
       liveStream = value;
+      // 选择url 设置默认播放清晰度
       setPreferResolution();
 
       // add delay to avoid hero animation lag
@@ -60,9 +61,7 @@ class LivePlayController extends GetxController {
     }).then((value) => settings.addRoomToHistory(room));
 
     // start danmaku server
-    liveDanmaku.start(int.parse(
-      room.userId.isEmpty ? room.roomId : room.userId,
-    ));
+    liveDanmaku.start(room.userId.isEmpty ? room.roomId : room.userId);
     liveDanmaku.onMessage = (msg) {
       if (msg.type == LiveMessageType.chat) {
         messages.add(msg);

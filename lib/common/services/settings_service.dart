@@ -134,7 +134,7 @@ class SettingsService extends GetxController {
     }
   }
 
-  static const List<String> platforms = ['bilibili', 'douyu', 'huya'];
+  static const List<String> platforms = ['bilibili', 'douyu', 'huya', 'ks'];
   final preferPlatform =
       (PrefUtil.getString('preferPlatform') ?? platforms[0]).obs;
 

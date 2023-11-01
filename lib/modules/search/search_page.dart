@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pure_live/core/sites.dart';
 import 'package:pure_live/common/l10n/generated/l10n.dart';
-import 'package:pure_live/modules/search/search_controller.dart';
+import 'package:pure_live/modules/search/search_controller.dart' as customer_com;
 
 import 'search_list_view.dart';
 
-class SearchPage extends GetView<SearchController> {
+class SearchPage extends GetView<customer_com.SearchController> {
   const SearchPage({Key? key}) : super(key: key);
 
   @override

@@ -2,6 +2,7 @@ import 'interface/live_site.dart';
 import 'site/bilibili_site.dart';
 import 'site/douyu_site.dart';
 import 'site/huya_site.dart';
+import 'site/ks_site.dart';
 
 class Sites {
   static List<Site> supportSites = [
@@ -19,6 +20,11 @@ class Sites {
       id: "huya",
       name: "虎牙",
       liveSite: HuyaSite(),
+    ),
+    Site(
+      id: "ks",
+      name: "快手",
+      liveSite: KsSite(),
     ),
   ];
 
